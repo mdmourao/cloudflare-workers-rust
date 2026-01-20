@@ -7,7 +7,7 @@ async fn fetch(
     _ctx: Context,
 ) -> Result<HttpResponse> {
     let body = Body::from_stream(futures_util::stream::once(async {
-        Ok::<_, worker::Error>("Hello World".as_bytes().to_vec())
+        Ok::<_, worker::Error>("Hello World, are u there?".as_bytes().to_vec())
     }))?;
     
     http::Response::builder()
